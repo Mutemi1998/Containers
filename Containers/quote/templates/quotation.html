@@ -1,0 +1,135 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+{% load static %}
+            
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Get A Free Quote</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="index.html">Home</a>
+                            <a href="quotation.html">Get A Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+
+
+            <!-- Contact Start -->
+            <div class="contact wow fadeInUp">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p>Get In Touch</p>
+                        <h2>Get A Free Quote</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="flaticon-address"></i>
+                                    <div class="contact-text">
+                                        <h2>Location</h2>
+                                        <p>Level 3/97 Pirie St, Adelaide SA 5000 Australia</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="flaticon-call"></i>
+                                    <div class="contact-text">
+                                        <h2>Phone</h2>
+                                        <p>Phone: 031 813 5604</p>
+										<p>Mobile: 063 135 0759</p>
+								        <p>Whatsapp: 063 135 0759</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="flaticon-send-mail"></i>
+                                    <div class="contact-text">
+                                        <h2>Email</h2>
+                                        <p>sales@boxbulkcontainers.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-form">
+                               
+								 <form method="post" action="quotation.php">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required="required" "Please enter your name" />
+                                       
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="required" "Please enter your email" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" name="phone"  id="phone" placeholder="Phone" required="required" "Please enter a phone number" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+									<div class="control-group">
+                                        <input type="text" class="form-control" name="address" id="address" placeholder="Address" required="required" "Please enter a address" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+									
+									<div class="control-group">
+									<select name="type" id="type" class="form-control" required="required">
+						<option value="">Choose Container Types & Size</option>
+						<option value="10ft storage container">10ft storage container</option>
+						<option value="20ft storage container">20ft storage container</option>
+<option value="40ft storage container">40ft storage container</option>
+
+<option value="10ft openside container">10ft openside container</option>
+<option value="20ft openside container">20ft openside container</option>
+<option value="40ft openside container">40ft openside container</option>
+
+<option value="10ft converted container">10ft converted (Office)container</option>
+<option value="20ft converted container">20ft converted (Office)container</option>
+<option value="40ft converted container">40ft converted (Office)container</option>
+
+<option value="10ft opentop container">10ft opentop container</option>
+<option value="20ft opentop container">20ft opentop container</option>
+<option value="40ft opentop container">40ft opentop container</option>
+
+<option value="10ft Tuckshop containers">10ft Tuckshop containers</option>
+<option value="20ft Tuckshop containers">20ft Tuckshop containers</option>
+<option value="40ft Tuckshop containers">40ft Tuckshop containers</option>
+
+<option value="10ft Office modified containers">10ft Office modified containers</option>
+<option value="20ft Office modified containers">20ft Office modified containers</option>
+<option value="40ft Office modified containers">40ft Office modified containers</option>
+
+<option value="10ft refrigerator containers">10ft refrigerator containers</option>
+<option value="20ft refrigerator containers">20ft refrigerator containers</option>
+<option value="40ft refrigerator containers">40ft refrigerator containers</option>
+<option value="Others Containers">Other Containers</option>
+					</select></div><br>
+					
+					 <div class="control-group">
+					<select name="condition" id="type" class="form-control" required="required">
+						<option value="non">Choose Condition</option>
+						<option value="new">New</option>
+						<option value="fairly-used">Fairly Used</option>
+					</select></div><br>
+					
+									
+                                    <div class="control-group">
+                                        <textarea class="form-control" name="message" id="message" placeholder="Additional Message" required="required" "Please enter your message"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit">Request Quote</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact End -->
+
+            {% endblock %}
