@@ -4,3 +4,4 @@ from quote.models import *
 # Register your models here.
 admin.site.register(Owner)
 admin.site.register(Contact)
+admin.site.register(ContactUs)
