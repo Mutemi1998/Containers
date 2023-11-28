@@ -83,16 +83,16 @@ DATABASES = {
 }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Containers;',
-        'USER': 'root',
-        'PASSWORD': 'your_password',
-        'HOST':'172.17.0.2',
-        'PORT':'3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Containers',
+#         'USER': 'root',
+#         'PASSWORD': 'your_password',
+#         'HOST':'172.17.0.2',
+#         'PORT':'3306',
+#     }
+# }
 
 
 # Password validation
