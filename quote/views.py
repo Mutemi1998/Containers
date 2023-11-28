@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from quote.models import Contact
+from quote.models import Contact, ContactUs
 
 
 def index(request):
@@ -38,7 +38,19 @@ def faq(request):
     return render(request, "faq.html")
 
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        contactUs = ContactUs(name=name,email=email,phone=phone,address=address,subject=subject,message=message)
+        contactUs.save()
+        return render(request, "contact.html", {"message": "Your contact has been submitted successfully!"})
+    else:
+        return render(request, "contact.html")
 
 def quotation(request):
     if request.method == 'POST':
