@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from quote.models import Contact
+
 
 def index(request):
     return render(request, "index.html")
@@ -39,7 +41,32 @@ def contact(request):
     return render(request, "contact.html")
 
 def quotation(request):
-    return render(request, "quotation.html")
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+        type = request.POST.get('type')
+        condition = request.POST.get('condition')
+        message = request.POST.get('message')
+
+        # Create a Contact object with the retrieved data
+        contact = Contact(
+            name=name,
+            email=email,
+            phone=phone,
+            address=address,
+            type=type,
+            condition=condition,
+            message=message
+        )
+
+        # Save the Contact object to the database
+        contact.save()
+
+        return render(request, "quotation.html", {"message": "Your quotation has been submitted successfully!"})
+    else:
+        return render(request, "quotation.html")
 
 def modification(request):
     return render(request, "modification.html")
